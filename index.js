@@ -103,7 +103,7 @@ client.on('ready', () => {
       .catch(console.error);
   }
   console.log('bot is online');
-  client.user.setAvatar('./avatar.png')
+  client.user.setAvatar('./image.png')
   .then(console.log(`New avatar set!`))
   .catch(console.error);
   client.user.setStatus('idle');
