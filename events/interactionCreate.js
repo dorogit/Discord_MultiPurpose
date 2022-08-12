@@ -1,3 +1,4 @@
+const { slashCommands } = require('../index');
 const client = require('../index')
 
 module.exports = {
@@ -6,8 +7,7 @@ module.exports = {
 	execute(interaction) {
       if (!interaction.isChatInputCommand()) return;
   
-      const command = client.slashCommands.get(interaction.commandName);
-      console.log(client.slashCommands)
+      const command = client.slashCommands.get(interaction.commandName)
       if (!command) return;
   
       try {

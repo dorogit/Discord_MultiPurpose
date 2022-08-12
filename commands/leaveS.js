@@ -11,13 +11,12 @@ module.exports = {
 
 		if (!queue)
 		{
-			await interaction.reply("There are no songs in the queue")
+			await interaction.reply("I'm not in a voice channel")
 			return;
-		}
+		} 
 
-        // Deletes all the songs from the queue and exits the channel
 		queue.destroy();
-
-        await interaction.reply("Why you do this to me? :(")
+        // Deletes all the songs from the queue and exits the channel
+		await interaction.reply("Why you do this to me? :(")
 	},
 }

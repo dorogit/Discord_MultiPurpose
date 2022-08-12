@@ -102,10 +102,7 @@ client.on('ready', () => {
       .then(() => console.log('Successfully updated commands for guild ' + guildId))
       .catch(console.error);
   }
-  console.log('bot is online');
-  client.user.setAvatar('./image.jpg')
-  .then(console.log(`New avatar set!`))
-  .catch(console.error);
+  console.log('bot is online!');
   client.user.setStatus('idle');
 });
 client.login(token);
