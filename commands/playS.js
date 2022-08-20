@@ -6,6 +6,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("play")
 		.setDescription("play a song from YouTube.")
+
 		.addSubcommand(subcommand =>
 			subcommand
 				.setName("search")
@@ -13,11 +14,12 @@ module.exports = {
 				.addStringOption(option =>
 					option.setName("searchterms").setDescription("search keywords").setRequired(true)
 				)
-		)
+		)        
+        
         .addSubcommand(subcommand =>
 			subcommand
-				.setName("playlist")
-				.setDescription("Plays a playlist from YT")
+				.setName("playlist youtube")
+				.setDescription("Plays a playlist from youtube")
 				.addStringOption(option => option.setName("url").setDescription("the playlist's url").setRequired(true))
 		)
 		.addSubcommand(subcommand =>
@@ -60,7 +62,7 @@ module.exports = {
                 .setFooter({ text: `Duration: ${song.duration}`})
 
 		}
-        else if (interaction.options.getSubcommand() === "playlist") {
+        else if (interaction.options.getSubcommand() === "playlist youtube") {
 
             // Search for the playlist using the discord-player
             let url = interaction.options.getString("url")
